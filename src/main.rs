@@ -1,6 +1,12 @@
+mod chapter3;
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
+use crate::chapter3::chapter_three_exec;
+
+//noinspection SpellCheckingInspection
+const HASHING_SALT:&str = "MASDNASJCKMASCOASNNOASKDM" ;
+
 //Chapter 2
 fn guessing_game() {
     //Chapter 2
@@ -34,5 +40,6 @@ fn guessing_game() {
 //
 
 fn main() {
-    guessing_game();
+    chapter_three_exec();
 }
+
