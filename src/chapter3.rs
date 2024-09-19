@@ -10,6 +10,17 @@ pub fn chapter_three_exec() {
 
     let cert_tuple:(&str,i8)=("BSc of Software engineering",16);
     let (certificate_name,certificate_score) = cert_tuple;
-    println!("You got you {certificate_name} with average grade of {certificate_score}");
+    println!("Dear {_first_name} {last_name}!. You got you {certificate_name} \
+    with average grade of {certificate_score} and you're {age} years old");
+
+    //smart use case of shadowing -> modifying a immutable variable and make it immutable again
+    let full_name = _first_name; // first variable overshadowed by the second full_name
+    let full_name = _first_name.to_owned()+last_name;
+    // and full_name is still immutable
+    println!("your full name is {full_name}");
+    //we also can use it to make a variable change it's type without casting, or declaring new var
+    let full_name = full_name.len();
+    println!("your full name's length is {full_name}");
+    // full name is now of type usize
 
 }
