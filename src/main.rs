@@ -1,11 +1,10 @@
-mod chapter3;
-
-use crate::chapter3::chapter_three_exec;
+mod chapter3_functions;
+use crate::chapter3_functions::entry;
 //noinspection SpellCheckingInspection
-const HASHING_SALT:&str = "MASDNASJCKMASCOASNNOASKDM" ;
+const HASHING_SALT: &str = "MASDNASJCKMASCOASNNOASKDM";
 
 
 fn main() {
-    chapter_three_exec();
+    entry();
 }
 

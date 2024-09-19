@@ -3,7 +3,7 @@ use std::io;
 use rand::Rng;
 
 //Chapter 2
-fn guessing_game() {
+pub fn guessing_game() {
     //Chapter 2
     loop {
         println!("Enter a random number please:\t");
