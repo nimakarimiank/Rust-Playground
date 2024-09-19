@@ -23,4 +23,26 @@ pub fn chapter_three_exec() {
     println!("your full name's length is {full_name}");
     // full name is now of type usize
 
+    //DTYPES
+    //SCALAR DTYPES
+    //INTEGER, FLOAT, BOOLEAN, CHAR
+    let integer_number :i8 = 123; //signed
+    let unsigned_integer_number:u8 = 223; //unsigned
+    //
+    let floating_number :f32 = 12.312; //doesn't have u or i variant
+    //operations
+    let truncated = -5 /3; // Upper Bracket of the result
+    println!("{truncated}");
+    let quotient = 56.7 / 32.2;
+    println!("{quotient}");
+    // remainder
+    let remainder = 43 % 5;
+    println!("{remainder}");
+    let is_valid = true;
+    let specified_bool : bool = false;
+    //CHAR
+    let sticker = '👅';
+    let specified_char = 'ŵ';
+    let char = 'f';
+
 }
