@@ -15,3 +15,7 @@ pub fn is_odd(number: i32) -> bool {
     }
     false
 }
+pub fn calculate_tax(number: f64) -> f64 {
+    let res = if number>=100.0 { number%5.0 } else { number % 2.0 };
+    res
+}
