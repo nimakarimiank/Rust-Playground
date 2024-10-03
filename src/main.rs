@@ -1,7 +1,3 @@
-mod chapter3_functions;
-mod control_flow;
-
-use crate::chapter3_functions::entry;
 use crate::control_flow::{is_even, is_odd};
 
 //noinspection SpellCheckingInspection
