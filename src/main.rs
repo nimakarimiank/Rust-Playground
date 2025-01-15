@@ -1,11 +1,10 @@
-use crate::get_first_word::get_first_word;
 
-mod get_first_word;
 fn main() {
-    let mut string_var = String::from("nimakarimian");
-    string_var.push_str(" ,Ms.c Ingenieurinformatik");
-    let index = get_first_word(&string_var);
-    println!("{index}")
+let mut tuple_data_type : (u8,&str,i32);
+    tuple_data_type = (12,"nima karimian",12313);
+    println!(
+        "{:#?}", tuple_data_type
+    );
 }
 
 
