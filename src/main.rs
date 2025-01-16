@@ -1,13 +1,9 @@
 fn main() {
-    let mut name = String::from("nima karimian,");
-    add_age(&mut name);
-    println!("{name}");
+    let greetings= String::from("hello world");
+    let hello = &greetings[0..5];
+    println!("{hello}");
+    let string_literals = "nima";
+
 }
-
-
-fn add_age(s: &mut String) {
-    s.push_str(" 27 years old");
-}
-
 
 
