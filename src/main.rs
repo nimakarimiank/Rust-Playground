@@ -1,12 +1,12 @@
-
 fn main() {
-    {
-        let st = "nima karimian"; // fixed size string
-        let mut heap_string = String::from(st);
-        heap_string.push_str(" kakolaki");
-        println!("{heap_string}");
-    }
-    println!("{heap_string}");
+    let mut name = String::from("nima karimian,");
+    add_age(&mut name);
+    println!("{name}");
+}
+
+
+fn add_age(s: &mut String) {
+    s.push_str(" 27 years old");
 }
 
 
