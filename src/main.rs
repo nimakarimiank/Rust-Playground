@@ -1,26 +1,18 @@
-fn main() {
-    let square = Rectangle::square(32);
-    let square_area = square.area();
-    println!("squares area is {:#?}",square_area);
-
-}
-
 #[derive(Debug)]
-struct Rectangle {
-    width: u32,
-    height: u32,
+enum IpAddrKind {
+    V4,V6
 }
-impl Rectangle {
-    fn square(size: u32)->Self{
-        Self {
-            height: size,
-            width: size
-        }
-    }
-    fn area(&self)-> u32{
-        self.height*self.width
-    }
-    fn can_hold(&self, other: &Rectangle)-> bool{
-        self.width > other.width && self.height > other.height
-    }
+struct IpAddress{
+    kind: IpAddrKind,
+    address: String
+}
+fn main() {
+    let home = IpAddress{
+        kind: IpAddrKind::V4,
+        address: String::from("127.0.0.1")
+    };
+    let loopback = IpAddress {
+        kind: IpAddrKind::V6,
+        address: String::from("::1"),
+    };
 }
