@@ -1,19 +1,9 @@
 fn main() {
-    let admin = Users {
-        is_active: true,
-        email: String::from("niimak97@gmail.com"),
-        password: String::from("MUNINTHINKNUMJUICE"),
-        user_name: String::from("Admin"),
-        full_name: String::from("nima karimian"),
-    };
-    println!("{}",admin.email);
+    let width:u32 = 30;
+    let height:u32 = 50;
+    println!("The area of rectangle is {} square pixels",area(width, height));
 }
 
-
-struct Users {
-    is_active: bool,
-    user_name: String,
-    email: String,
-    password: String,
-    full_name: String,
-}
+    fn area(height:u32, width:u32) -> u32 {
+        width*height
+    }
