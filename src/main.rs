@@ -1,14 +1,19 @@
 fn main() {
     let rect1 = Rectangle {
-        height: 32,
-        width: 42,
+        width: 30,
+        height: 50,
     };
-    //now we didn't move rec1 and just passed a reference to the method
-    let area = area(&rect1);
-    // since we didnt move the rect1 to the area method we can use it since it is not out of scope
-    println!("{:#?}",rect1);
+    let rect2 = Rectangle {
+        width: 10,
+        height: 40,
+    };
+    let rect3 = Rectangle {
+        width: 60,
+        height: 45,
+    };
 
-    println!("The area of rectangle is {} square pixels", area);
+    println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
+    println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
 }
 
 #[derive(Debug)]
@@ -16,6 +21,11 @@ struct Rectangle {
     width: u32,
     height: u32,
 }
-fn area(rectangle: &Rectangle) -> u32 {
-    rectangle.height * rectangle.width
+impl Rectangle {
+    fn area(&self)-> u32{
+        self.height*self.width
+    }
+    fn can_hold(&self, other: &Rectangle)-> bool{
+        self.width > other.width && self.height > other.height
+    }
 }
