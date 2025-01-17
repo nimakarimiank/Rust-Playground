@@ -3,10 +3,11 @@ fn main() {
         height: 32,
         width: 42,
     };
-    //here rec1 is moved to area and is not valid from now on.
-    let area = area(rect1);
-    //rec1 is not valid since we are borrowing it here and it has been moved in ln 7
+    //now we didn't move rec1 and just passed a reference to the method
+    let area = area(&rect1);
+    // since we didnt move the rect1 to the area method we can use it since it is not out of scope
     println!("{:#?}",rect1);
+
     println!("The area of rectangle is {} square pixels", area);
 }
 
@@ -15,6 +16,6 @@ struct Rectangle {
     width: u32,
     height: u32,
 }
-fn area(rectangle: Rectangle) -> u32 {
+fn area(rectangle: &Rectangle) -> u32 {
     rectangle.height * rectangle.width
 }
