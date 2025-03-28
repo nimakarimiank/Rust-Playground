@@ -32,4 +32,10 @@ fn main() {
         count += 1;
     }
     println!("End!");
+    let first_name = String::from("Nima");
+    let middle_name = first_name.clone(); // deep copy
+    println!("{first_name} {middle_name}");
+    let first_name_shallow = first_name;//here first_name var gets invalidated
+    println!("{first_name_shallow}");
+    // println!("{first_name}");//throws an error
 }
