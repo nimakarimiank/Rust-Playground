@@ -11,5 +11,6 @@ fn main() {
             Coins::Quarter=>25
         }
     }
-
+let array = [[4;4];3];
+    println!("{:#?}", array);
 }
